@@ -4,7 +4,6 @@ Feature: Test Invalid User Credentials Feature
 Scenario Outline: Login fail possible combinations 
 	Given that the user should navigate in PEGA Login Page
     And user verify the Login Page Elements is Visible
-    When user login using invalid credentials with username "invalidUser" and password "InvalidPassword"
     When user login using invalid credentials form ExcelData with File "<ExcelFile>" and SheetName "<SheetName>"
     Then user should not proceed to Dashboard Page
 #	But user login 

@@ -3,11 +3,13 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import junit.framework.Assert;
+import net.serenitybdd.core.pages.WebElementFacade;
 
 public class LoginPage {
 	
@@ -20,7 +22,7 @@ public class LoginPage {
 	public By login_button				= By.xpath(login_parent_selector + "//button[contains(@class,\"loginButton\")]");
 	public By error_message_label		= By.xpath("//*[@class=\"errorMessage\"]");
 	
-	
+
 	public By[] loginPagements =
 	{
 		user_textBox,
@@ -54,9 +56,11 @@ public class LoginPage {
 			
 			driver.findElement(elements).isDisplayed();
 			driver.findElement(elements).isEnabled();
+
 		}
 
 	}
+	
 
 	public void verifyPageApplication(String url) {
 		
@@ -106,7 +110,6 @@ public class LoginPage {
 		driver.findElement(user_textBox).sendKeys(username);
 		driver.findElement(password_textBox).sendKeys(password);
 		driver.findElement(login_button).click();
-
 	}
 
 }

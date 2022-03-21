@@ -22,13 +22,16 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.version>4.13.2</junit.version>
 		<it.cucumber.version>7.1.0</it.cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>3.0.0-M5</maven.surefire.version>
 		<java.version>11</java.version>
+		<serenity.version>3.2.1</serenity.version>
+		<serenity.maven.version>3.2.1</serenity.maven.version>
+		<serenity.cucumber.version>3.2.1</serenity.cucumber.version>
 
 	</properties>
 	<repositories>
@@ -90,7 +93,47 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13.1</version>
-			 <scope>test</scope>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-assertions</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-ensure</artifactId>
+			<version>${serenity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>${serenity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-junit</artifactId>
+			<version>${serenity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-cucumber</artifactId>
+			<version>${serenity.cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-rest-assured</artifactId>
+			<version>${serenity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -133,12 +176,17 @@
 			<version>1.2.5</version>
 			<scope>compile</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.1.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>4.1.1</version>
+		</dependency>
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -201,53 +249,73 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<includes>
-						<include>**/*Runner.java</include>
+						<!-- Cucumber -->
+						<!-- <include>**/*Runner.java</include> -->
+						<!-- Serenity Cucumber -->
+						<include>**/*SerenityTestRunner.java</include>
 					</includes>
 					<parallel>methods</parallel>
 					<threadCount>4</threadCount>
 					<useUnlimitedThreads>false</useUnlimitedThreads>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+						<configuration>
+							<!--UNCOMMENT - To add any exclusions if required -->
+							<excludes>
+								<exclude>**/*IT*.java</exclude>
+							</excludes>
+							<includes>
+								<!--UUNCOMMENT BELOW LINE- To execute feature files with a single 
+									runner <include>**/MyTestRunner.java</include> -->
+								<!--UNCOMMENT BELOW LINE - To execute feature files with multiple 
+									runners -->
+								<include>**/*SerenityTestRunner.java</include>
+							</includes>
+							<!--UNCOMMENT BELOW 3 LINES - To execute using parallel or combination -->
+							<parallel>methods</parallel>
+							<threadCount>4</threadCount>
+							<perCoreThreadCount>true</perCoreThreadCount>
+							<!-- UNCOMMENT BELOW 3 LINES - To execute using forking or combination -->
+							<!-- <forkCount>4</forkCount> <reuseForks>true</reuseForks> -->
+							<reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory>
 
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-failsafe-plugin</artifactId>
-		<version>3.0.0-M5</version>
-		<executions>
-			<execution>
-				<goals>
-					<goal>integration-test</goal>
-				</goals>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.maven.version}</version>
 				<configuration>
-					<!--UNCOMMENT - To add any exclusions if required-->
-					<excludes>
-						<exclude>**/*IT*.java</exclude>
-					</excludes>
-					<includes>
-						<!--UUNCOMMENT BELOW LINE- To execute feature files with a single runner
-						<include>**/MyTestRunner.java</include>-->
-						<!--UNCOMMENT BELOW LINE - To execute feature files with multiple runners-->
-						<include>**/*Runner.java</include>
-					</includes>
-					<!--UNCOMMENT BELOW 3 LINES - To execute using parallel or combination-->
-					<parallel>methods</parallel>
-					<threadCount>4</threadCount>
-					<perCoreThreadCount>true</perCoreThreadCount>
-				<!--	UNCOMMENT BELOW 3 LINES - To execute using forking or combination-->
-					<forkCount>4</forkCount>
-					<reuseForks>true</reuseForks>
-					<reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory>
-						
+					<tags>${tags}</tags>
 				</configuration>
-			</execution>
-		</executions>
-	</plugin> 
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 
