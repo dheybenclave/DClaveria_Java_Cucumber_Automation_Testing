@@ -6,33 +6,25 @@ import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.pages.LoginPage;
-import com.pages.command.LoginUser;
 import com.pages.drivers.DriversFactory;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 
-import com.pages.selector.LoginPageSelectors;
 import com.utils.ExcelReader;
 
 public class LoginPageSteps {
 
-	public static Logger logger = LoggerFactory.getLogger(LoginPageSteps.class);
 	LoginPage loginPage = new LoginPage(DriversFactory.getWebDriver());
-	LoginPageSelectors selector = new LoginPageSelectors();
-	LoginUser login;
-
+	Logger logger = loginPage.logger;
+	
 	private String getTitlePage;
 
 	@Given("that the user should navigate in PEGA Login Page")
 	public void that_the_user_should_navigate_in_pega_login_page() {
-
-		DriversFactory.getWebDriver().get("http://localhost:8080/prweb/PRServlet/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD");
+		loginPage.openApplication();
 		loginPage.verifyPageApplication("Login Page");
-
 	}
 
 	@And("user verify the Login Page Elements is Visible")
@@ -52,8 +44,6 @@ public class LoginPageSteps {
 			getTitlePage = e.get("titlePage");
 		}
 	}
-
-	
 
 	@When("user login using valid credentials with username {string} and password {string}")
 	public void user_login_using_valid_credentials_with_username_and_password(String username, String password) {

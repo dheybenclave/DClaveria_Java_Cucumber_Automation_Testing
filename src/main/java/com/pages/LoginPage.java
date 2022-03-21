@@ -3,49 +3,40 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.utils.BaseClass;
+
 import junit.framework.Assert;
-import net.serenitybdd.core.pages.WebElementFacade;
 
-public class LoginPage {
+@SuppressWarnings("deprecation")
+public class LoginPage extends BaseClass {
 	
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	public String login_parent_selector = "//div[@id=\"credentials\"]";
-	public By user_textBox 				= By.xpath(login_parent_selector + "//div[@class=\"field user\"]//input");
-	public By password_textBox			= By.xpath(login_parent_selector + "//div[@class=\"field password\"]//input");
-	public By login_button				= By.xpath(login_parent_selector + "//button[contains(@class,\"loginButton\")]");
-	public By error_message_label		= By.xpath("//*[@class=\"errorMessage\"]");
-	
-
-	public By[] loginPagements =
-	{
-		user_textBox,
-		password_textBox,
-		login_button
-	};
-	
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	public static Logger logger = LoggerFactory.getLogger(LoginPage.class);
-
 	WebDriver driver;
 	WebDriverWait wait;
 	
 	public LoginPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, 3000);
 	}
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public String login_parent_selector = "//div[@id=\"credentials\"]";
+	public By user_textBox				= By.xpath(login_parent_selector + "//div[@class=\"field user\"]//input");
+	public By password_textBox 			= By.xpath(login_parent_selector + "//div[@class=\"field password\"]//input");
+	public By login_button 				= By.xpath(login_parent_selector + "//button[contains(@class,\"loginButton\")]");
+	public By error_message_label 		= By.xpath("//*[@class=\"errorMessage\"]");
 
-	public String getPageTitle() {
-		return (String) driver.getTitle();
-	}
-
+	public By[] loginPagements = {
+		user_textBox,
+		password_textBox,
+		login_button
+	};
+		
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	public void verifyLoginPageElements() {
 		By[] webPageElement = loginPagements;
 
@@ -56,28 +47,9 @@ public class LoginPage {
 			
 			driver.findElement(elements).isDisplayed();
 			driver.findElement(elements).isEnabled();
-
-		}
-
-	}
-	
-
-	public void verifyPageApplication(String url) {
-		
-		String currUrl = getPageTitle();
-		url = url == null ? currUrl : url;
-		logger.debug("verifyApplication: '" + url + "' ");
-	
-		wait.until(ExpectedConditions.titleContains(currUrl));
-		
-		Assert.assertTrue(currUrl.contains(url));
-
-		 try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
 		}
 	}
+	
 	
 	public void verifyErrorMessage(String errMsgLabel, boolean isVisible) {
 		
