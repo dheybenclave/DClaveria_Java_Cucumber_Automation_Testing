@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 	features = {"src/main/resources/AppFeatures" },
 	glue ={"stepdefinitions", "hooks" },
-//	tags= "@All", //"@Regression or @Smoke | not @Prod | and @Smoke"
-//	monochrome=false,
-//	dryRun= true,
+	tags= "@All", //"@Regression or @Smoke | not @Prod | and @Smoke"
+	monochrome=false,
+	dryRun= false,
 	plugin = {
 		"pretty",
 		"html:target/cucumber-html-report.html",

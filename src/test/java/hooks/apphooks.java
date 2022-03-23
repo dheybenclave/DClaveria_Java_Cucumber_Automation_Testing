@@ -2,11 +2,11 @@ package hooks;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import com.pages.drivers.DriversFactory;
 import com.utils.*;
 import io.cucumber.java.*;
@@ -20,7 +20,7 @@ public class apphooks {
 	private ConfigReader configReader;
 	Properties properties;
 
-	public static Logger logger = LoggerFactory.getLogger(DriversFactory.class);
+	public Logger logger = Logger.getLogger(apphooks.class);
 
 	@Before(order = 0)
 	public void getProperty() {
@@ -35,7 +35,7 @@ public class apphooks {
 		String browser = properties.getProperty("browser");
 
 		driverFactory = new DriversFactory();
-		webDriver = driverFactory.init_driver(browser);
+		webDriver = driverFactory.init_driver(browser, properties);
 
 	}
 

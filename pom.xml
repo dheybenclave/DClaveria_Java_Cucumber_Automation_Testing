@@ -22,17 +22,17 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.version>4.13.2</junit.version>
 		<it.cucumber.version>7.1.0</it.cucumber.version>
+		<java.version>11</java.version>
+		<serenity.version>3.2.0</serenity.version>
+		<serenity.cucumber.version>3.2.0</serenity.cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>3.0.0-M5</maven.surefire.version>
-		<java.version>11</java.version>
-		<serenity.version>3.2.1</serenity.version>
-		<serenity.maven.version>3.2.1</serenity.maven.version>
-		<serenity.cucumber.version>3.2.1</serenity.cucumber.version>
-
+		<maven.failsafe.plugin.version>3.0.0-M5</maven.failsafe.plugin.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<tags></tags>
 	</properties>
 	<repositories>
 		<repository>
@@ -70,10 +70,13 @@
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured-all</artifactId>
 			<version>4.3.2</version>
-
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -88,12 +91,6 @@
 			<groupId>com.ea.async</groupId>
 			<artifactId>ea-async</artifactId>
 			<version>1.2.3</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
@@ -141,16 +138,34 @@
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit-platform-engine</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>5.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-html</artifactId>
+			<version>0.2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-gherkin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>2.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+
 		</dependency>
 		<dependency>
 			<groupId>org.junit.platform</groupId>
@@ -163,6 +178,13 @@
 		<dependency>
 			<groupId>org.junit.vintage</groupId>
 			<artifactId>junit-vintage-engine</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit-dep</artifactId>
+			<version>4.11</version>
+			<type>pom</type>
+
 		</dependency>
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -224,7 +246,6 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.1</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -249,16 +270,12 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<includes>
-						<!-- Cucumber -->
-						<!-- <include>**/*Runner.java</include> -->
-						<!-- Serenity Cucumber -->
 						<include>**/*SerenityTestRunner.java</include>
 					</includes>
 					<parallel>methods</parallel>
@@ -269,25 +286,20 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M5</version>
+				<version>${maven.failsafe.plugin.version}</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>integration-test</goal>
+							<goal>verify</goal>
 						</goals>
 						<configuration>
-							<!--UNCOMMENT - To add any exclusions if required -->
 							<excludes>
 								<exclude>**/*IT*.java</exclude>
 							</excludes>
 							<includes>
-								<!--UUNCOMMENT BELOW LINE- To execute feature files with a single 
-									runner <include>**/MyTestRunner.java</include> -->
-								<!--UNCOMMENT BELOW LINE - To execute feature files with multiple 
-									runners -->
 								<include>**/*SerenityTestRunner.java</include>
 							</includes>
-							<!--UNCOMMENT BELOW 3 LINES - To execute using parallel or combination -->
 							<parallel>methods</parallel>
 							<threadCount>4</threadCount>
 							<perCoreThreadCount>true</perCoreThreadCount>
@@ -302,10 +314,23 @@
 			<plugin>
 				<groupId>net.serenity-bdd.maven.plugins</groupId>
 				<artifactId>serenity-maven-plugin</artifactId>
-				<version>${serenity.maven.version}</version>
+				<version>${serenity.version}</version>
 				<configuration>
 					<tags>${tags}</tags>
+					<reports>single-page-html</reports>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-single-page-report</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-core</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
 						<id>serenity-reports</id>
@@ -313,6 +338,9 @@
 						<goals>
 							<goal>aggregate</goal>
 						</goals>
+						<configuration>
+							<outputDirectory>C:\\Users\\Vibha\\Projects\\Vibha_Personal\\DetailedReport</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

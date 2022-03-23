@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.slf4j.Logger;
 import com.pages.LoginPage;
 import com.pages.drivers.DriversFactory;
 
@@ -14,15 +14,16 @@ import io.cucumber.java.en.*;
 
 import com.utils.ExcelReader;
 
-public class LoginPageSteps {
+public class LoginPageSteps  {
 
 	LoginPage loginPage = new LoginPage(DriversFactory.getWebDriver());
-	Logger logger = loginPage.logger;
+	Logger logger = Logger.getLogger(LoginPageSteps.class);
 	
 	private String getTitlePage;
 
 	@Given("that the user should navigate in PEGA Login Page")
 	public void that_the_user_should_navigate_in_pega_login_page() {
+
 		loginPage.openApplication();
 		loginPage.verifyPageApplication("Login Page");
 	}
@@ -36,7 +37,7 @@ public class LoginPageSteps {
 	public void user_login_using_valid_credentials(DataTable dataTable) {
 
 		List<Map<String, String>> userList = dataTable.asMaps(String.class, String.class);
-		logger.debug("List of User: " + userList);
+		logger.info("List of User: " + userList);
 
 		for (Map<String, String> e : userList) {
 			System.out.println(e.get("username") + "e.get(\"username\")");

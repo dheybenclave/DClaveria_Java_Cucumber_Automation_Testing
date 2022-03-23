@@ -1,8 +1,5 @@
 package com.pages.selector;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.*;
 import org.openqa.selenium.By;
 
 public class LoginPageSelectors {

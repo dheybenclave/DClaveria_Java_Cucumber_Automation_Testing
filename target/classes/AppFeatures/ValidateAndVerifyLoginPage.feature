@@ -24,8 +24,7 @@ Scenario: Login to PEGA Site using Author, Manager and User
 #    	| user@vrbank   | pega123! | Cosmos Application |
     	
     Then user should proceed to Dashboard Page
-    
-
+   
 @All
 @Regression    
 Scenario: Login to PEGA Site using User

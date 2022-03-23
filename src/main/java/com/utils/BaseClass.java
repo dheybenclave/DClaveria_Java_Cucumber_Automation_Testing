@@ -1,11 +1,11 @@
 package com.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 import com.pages.drivers.DriversFactory;
 
@@ -18,16 +18,18 @@ public class BaseClass {
 	public WebDriverWait wait;
 	public Object pages;
 	public Logger logger;
-
+	static ConstantsURL url;
+	
 	public BaseClass(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver,3000);
-		this.logger = LoggerFactory.getLogger(BaseClass.class);
+		this.logger = Logger.getLogger(BaseClass.class);
 		
 	}
 
+	@SuppressWarnings("static-access")
 	public void openApplication() {
-		DriversFactory.getWebDriver().get("http://localhost:8080/prweb/PRServlet/app/default/beEBp4uRVTogorRwSwWqbOtn9IL2fwdI*/!STANDARD");
+		DriversFactory.getWebDriver().get(url.LOCALHOST.getURL());
 	}
 
 	public void verifyPageApplication(String url) {
