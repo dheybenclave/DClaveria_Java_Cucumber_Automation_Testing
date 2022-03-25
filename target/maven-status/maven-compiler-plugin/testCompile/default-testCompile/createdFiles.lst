@@ -1,4 +1,0 @@
-testsuites\HCLSerenityTestRunner.class
-hooks\apphooks.class
-stepdefinitions\LoginPageSteps.class
-testsuites\HCLTestRunner.class

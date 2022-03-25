@@ -1,9 +1,0 @@
-com\utils\ConfigReader.class
-com\pages\selector\LoginPageSelectors.class
-com\pages\command\LoginUser.class
-com\utils\ExcelReader.class
-com\pages\drivers\DriversFactory.class
-com\utils\ConstantsURL.class
-com\utils\Utils.class
-com\pages\LoginPage.class
-com\utils\BaseClass.class
