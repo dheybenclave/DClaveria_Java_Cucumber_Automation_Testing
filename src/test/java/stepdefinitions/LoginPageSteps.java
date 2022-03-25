@@ -6,8 +6,9 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import com.pages.LoginPage;
+
 import com.pages.drivers.DriversFactory;
+import com.pages.page.LoginPage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;

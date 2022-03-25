@@ -68,6 +68,12 @@
 		</dependency>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.5.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured-all</artifactId>
 			<version>4.3.2</version>
 			<scope>test</scope>
@@ -123,7 +129,6 @@
 			<artifactId>serenity-rest-assured</artifactId>
 			<version>${serenity.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -140,6 +145,12 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit-platform-engine</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>1.0.6</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.masterthought</groupId>
@@ -311,39 +322,16 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin>
-				<groupId>net.serenity-bdd.maven.plugins</groupId>
-				<artifactId>serenity-maven-plugin</artifactId>
-				<version>${serenity.version}</version>
-				<configuration>
-					<tags>${tags}</tags>
-					<reports>single-page-html</reports>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>net.serenity-bdd</groupId>
-						<artifactId>serenity-single-page-report</artifactId>
-						<version>${serenity.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>net.serenity-bdd</groupId>
-						<artifactId>serenity-core</artifactId>
-						<version>${serenity.version}</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<id>serenity-reports</id>
-						<phase>post-integration-test</phase>
-						<goals>
-							<goal>aggregate</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>C:\\Users\\Vibha\\Projects\\Vibha_Personal\\DetailedReport</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
+			<!-- <plugin> <groupId>net.serenity-bdd.maven.plugins</groupId> <artifactId>serenity-maven-plugin</artifactId> 
+				<version>${serenity.version}</version> <configuration> <tags>${tags}</tags> 
+				<reports>single-page-html</reports> </configuration> <dependencies> <dependency> 
+				<groupId>net.serenity-bdd</groupId> <artifactId>serenity-single-page-report</artifactId> 
+				<version>${serenity.version}</version> </dependency> <dependency> <groupId>net.serenity-bdd</groupId> 
+				<artifactId>serenity-core</artifactId> <version>${serenity.version}</version> 
+				</dependency> </dependencies> <executions> <execution> <id>serenity-reports</id> 
+				<phase>post-integration-test</phase> <goals> <goal>aggregate</goal> </goals> 
+				<configuration> <outputDirectory>C:\\Users\\Vibha\\Projects\\Vibha_Personal\\DetailedReport</outputDirectory> 
+				</configuration> </execution> </executions> </plugin> -->
 
 		</plugins>
 

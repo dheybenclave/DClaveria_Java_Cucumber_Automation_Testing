@@ -29,7 +29,7 @@ public class BaseClass {
 
 	@SuppressWarnings("static-access")
 	public void openApplication() {
-		DriversFactory.getWebDriver().get(url.LOCALHOST.getURL());
+		DriversFactory.getWebDriver().get(url.WEB_APP_LOCALHOST.getURL());
 	}
 
 	public void verifyPageApplication(String url) {
