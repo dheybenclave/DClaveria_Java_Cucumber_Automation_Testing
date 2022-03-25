@@ -1,18 +1,18 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.*;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.Matchers.contains;
+
+import org.apache.log4j.Logger;
+
+import com.utils.ConstantsURL;
+
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.restassured.RestAssured;
+import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSender;
-import io.restassured.specification.RequestSpecification;
-
-import org.junit.Assert;
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-import org.apache.log4j.Logger;
-import com.utils.ConstantsURL;
 
 @SuppressWarnings("static-access")
 public class GetPostSteps {

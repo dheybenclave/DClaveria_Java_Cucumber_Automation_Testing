@@ -1,11 +1,10 @@
 package com.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.log4j.Logger;
 
 import com.pages.drivers.DriversFactory;
 
@@ -27,9 +26,8 @@ public class BaseClass {
 		
 	}
 
-	@SuppressWarnings("static-access")
 	public void openApplication() {
-		DriversFactory.getWebDriver().get(url.WEB_APP_LOCALHOST.getURL());
+		DriversFactory.getWebDriver().get(ConstantsURL.WEB_APP_LOCALHOST.getURL());
 	}
 
 	public void verifyPageApplication(String url) {

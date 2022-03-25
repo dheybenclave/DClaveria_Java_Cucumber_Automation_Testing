@@ -1,0 +1,5 @@
+testsuites\HCLSerenityTestRunner.class
+hooks\apphooks.class
+stepdefinitions\LoginPageSteps.class
+stepdefinitions\GetPostSteps.class
+testsuites\HCLTestRunner.class
