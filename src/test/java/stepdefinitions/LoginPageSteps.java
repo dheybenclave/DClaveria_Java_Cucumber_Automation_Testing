@@ -1,10 +1,11 @@
 package stepdefinitions;
 
+import static com.utils.BaseClass.logger;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import com.pages.drivers.DriversFactory;
@@ -20,7 +21,6 @@ import io.cucumber.java.en.When;
 public class LoginPageSteps  {
 
 	LoginPage loginPage = new LoginPage(DriversFactory.getWebDriver());
-	Logger logger = Logger.getLogger(LoginPageSteps.class);
 	
 	private String getTitlePage;
 

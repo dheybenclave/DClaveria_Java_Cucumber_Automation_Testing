@@ -2,11 +2,13 @@ package hooks;
 
 import java.util.Properties;
 
+import static com.utils.BaseClass.restAssuredExtension;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.api.RestAssuredExtension;
 import com.pages.drivers.DriversFactory;
 import com.utils.*;
 import io.cucumber.java.*;
@@ -20,7 +22,7 @@ public class apphooks {
 	private ConfigReader configReader;
 	Properties properties;
 
-	public Logger logger = Logger.getLogger(apphooks.class);
+	public static Logger logger = Logger.getLogger(BaseClass.class);
 
 	@Before(order = 0)
 	public void getProperty() {
@@ -39,9 +41,15 @@ public class apphooks {
 
 	}
 
+	@Before(order = 2)
+	public void setUpRESTAPI() {
+		restAssuredExtension = new RestAssuredExtension();
+
+	}
+
 	@After(order = 0) // first call if @After
 	public void closeBrowser() {
-		logger.debug("close the browser");
+		logger.debug("Close Browser");
 		webDriver.quit();
 	}
 

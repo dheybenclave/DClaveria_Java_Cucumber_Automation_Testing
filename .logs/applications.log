@@ -1,0 +1,64 @@
+28-03-2022 10:00:17 DEBUG apphooks:33 - Set up Browser
+28-03-2022 10:00:20 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:3000
+28-03-2022 10:00:20 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:3000
+28-03-2022 10:00:20 DEBUG RequestAddCookies:123 - CookieSpec selected: ignoreCookies
+28-03-2022 10:00:20 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+28-03-2022 10:00:20 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+28-03-2022 10:00:20 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+28-03-2022 10:00:20 DEBUG DefaultHttpClient:677 - Attempt 1 to execute request
+28-03-2022 10:00:20 DEBUG DefaultClientConnection:274 - Sending request: GET /posts?id=2 HTTP/1.1
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "GET /posts?id=2 HTTP/1.1[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "Accept: */*[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "Host: localhost:3000[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.1)[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  >> "[\r][\n]"
+28-03-2022 10:00:20 DEBUG headers:278 - >> GET /posts?id=2 HTTP/1.1
+28-03-2022 10:00:20 DEBUG headers:281 - >> Accept: */*
+28-03-2022 10:00:20 DEBUG headers:281 - >> Host: localhost:3000
+28-03-2022 10:00:20 DEBUG headers:281 - >> Connection: Keep-Alive
+28-03-2022 10:00:20 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.13 (Java/15.0.1)
+28-03-2022 10:00:20 DEBUG headers:281 - >> Accept-Encoding: gzip,deflate
+28-03-2022 10:00:20 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "X-Powered-By: Express[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Vary: Origin, Accept-Encoding[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Pragma: no-cache[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Expires: -1[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "X-Content-Type-Options: nosniff[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Content-Length: 73[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "ETag: W/"49-nosvdLiqDYtwZGjld4gk2zVmLQo"[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Date: Mon, 28 Mar 2022 02:00:20 GMT[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "Connection: keep-alive[\r][\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "[\r][\n]"
+28-03-2022 10:00:20 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+28-03-2022 10:00:20 DEBUG headers:262 - << HTTP/1.1 200 OK
+28-03-2022 10:00:20 DEBUG headers:265 - << X-Powered-By: Express
+28-03-2022 10:00:20 DEBUG headers:265 - << Vary: Origin, Accept-Encoding
+28-03-2022 10:00:20 DEBUG headers:265 - << Access-Control-Allow-Credentials: true
+28-03-2022 10:00:20 DEBUG headers:265 - << Cache-Control: no-cache
+28-03-2022 10:00:20 DEBUG headers:265 - << Pragma: no-cache
+28-03-2022 10:00:20 DEBUG headers:265 - << Expires: -1
+28-03-2022 10:00:20 DEBUG headers:265 - << X-Content-Type-Options: nosniff
+28-03-2022 10:00:20 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+28-03-2022 10:00:20 DEBUG headers:265 - << Content-Length: 73
+28-03-2022 10:00:20 DEBUG headers:265 - << ETag: W/"49-nosvdLiqDYtwZGjld4gk2zVmLQo"
+28-03-2022 10:00:20 DEBUG headers:265 - << Date: Mon, 28 Mar 2022 02:00:20 GMT
+28-03-2022 10:00:20 DEBUG headers:265 - << Connection: keep-alive
+28-03-2022 10:00:20 DEBUG DefaultHttpClient:504 - Connection can be kept alive indefinitely
+28-03-2022 10:00:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:547 - Parsing response as: application/json; charset=utf-8
+28-03-2022 10:00:20 DEBUG RequestSpecificationImpl$RestAssuredHttpBuilder:550 - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+28-03-2022 10:00:20 DEBUG wire:73 -  << "[[\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "  {[\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "    "id": 2,[\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "    "title": "rest-assured",[\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "    "author": "api"[\n]"
+28-03-2022 10:00:20 DEBUG wire:73 -  << "  }[\n]"
+28-03-2022 10:00:20 DEBUG wire:87 -  << "]"
+28-03-2022 10:00:20 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@428eb3d5
+28-03-2022 10:00:20 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+28-03-2022 10:00:21 DEBUG GetPostSteps:53 - getBody : io.restassured.internal.RestAssuredResponseImpl@7793b55d
+28-03-2022 10:00:21 DEBUG apphooks:44 - close the browser

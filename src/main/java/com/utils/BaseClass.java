@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.api.RestAssuredExtension;
 import com.pages.drivers.DriversFactory;
 
 import junit.framework.Assert;
@@ -16,14 +17,14 @@ public class BaseClass {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	public Object pages;
-	public Logger logger;
-	static ConstantsURL url;
+	public static RestAssuredExtension restAssuredExtension;
+	public static Logger logger = Logger.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
+	public static ConstantsURL url;
+	
 	
 	public BaseClass(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver,3000);
-		this.logger = Logger.getLogger(BaseClass.class);
-		
 	}
 
 	public void openApplication() {
