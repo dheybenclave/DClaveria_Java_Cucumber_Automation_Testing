@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">HCL ING Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 29, 2022 12:14:50 PM</span></a>
+<a href="#"><span class="badge badge-primary">Apr 1, 2022 03:19:43 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,19 +66,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 29, 2022 12:14:50 PM</h3>
+<h3>Apr 1, 2022 03:19:43 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 29, 2022 12:14:56 PM</h3>
+<h3>Apr 1, 2022 03:21:39 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>5</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -101,7 +101,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> features passed
+<b>5</b> features passed
 </small>
 </div>
 <div>
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>9</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>37</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Verify different GET operations using REST-assured":4.659
+"Test Invalid User Credentials Feature":38.76,"Validate And Verify Login Page to PEGA Site":61.167,"Verify DELETE operations using REST-assured":4.018,"Verify GET operations using REST-assured":6.504,"Verify different POST operations using REST-assured":4.674
 };
 </script>
 <div class="row">
@@ -173,6 +173,22 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>@All</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@PatchTesting</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -181,6 +197,30 @@ var timeline = {
 </tr>
 <tr>
 <td>@Performance</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@GETTesting</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@testInvalid</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Smoke</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -188,7 +228,23 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@testing3</td>
+<td>@DeleteTesting</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Test1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@POSTTesting</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -230,18 +286,18 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 5,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
+passChild: 9,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 3,
+passGrandChild: 37,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -266,7 +322,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@All</a><a class="dropdown-item" href="#">@Performance</a><a class="dropdown-item" href="#">@testing3</a>
+<a class="dropdown-item" href="#">@All</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@PatchTesting</a><a class="dropdown-item" href="#">@Performance</a><a class="dropdown-item" href="#">@GETTesting</a><a class="dropdown-item" href="#">@testInvalid</a><a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@DeleteTesting</a><a class="dropdown-item" href="#">@Test1</a><a class="dropdown-item" href="#">@POSTTesting</a>
 </ul>
 </li>
 </ul>
@@ -277,9 +333,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify different GET operations using REST-assured</p>
+            <p class="name">Test Invalid User Credentials Feature</p>
             <p class="text-sm">
-              <span>12:14:51 PM</span> / <span>00:00:04:659</span>
+              <span>3:19:44 PM</span> / <span>00:00:38:760</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -287,10 +343,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify different GET operations using REST-assured</h5>
-<span class='badge badge-success'>03.29.2022 12:14:51 PM</span>
-<span class='badge badge-danger'>03.29.2022 12:14:56 PM</span>
-<span class='badge badge-default'>00:00:04:659</span>
+<h5 class="test-status text-pass">Test Invalid User Credentials Feature</h5>
+<span class='badge badge-success'>04.01.2022 3:19:44 PM</span>
+<span class='badge badge-danger'>04.01.2022 3:20:22 PM</span>
+<span class='badge badge-default'>00:00:38:760</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -302,23 +358,416 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify one existing comments</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login fail possible combinations</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Login fail possible combinations</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given that the user should navigate in PEGA Login Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user verify the Login Page Elements is Visible</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user login using invalid credentials form ExcelData with File "InvalidUserCredentials" and SheetName "InvalidUserCredentials"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should not proceed to Dashboard Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user gets login failed error message</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate And Verify Login Page to PEGA Site</p>
+            <p class="text-sm">
+              <span>3:20:22 PM</span> / <span>00:01:01:167</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate And Verify Login Page to PEGA Site</h5>
+<span class='badge badge-success'>04.01.2022 3:20:22 PM</span>
+<span class='badge badge-danger'>04.01.2022 3:21:24 PM</span>
+<span class='badge badge-default'>00:01:01:167</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Login to PEGA Site using Author, Manager and User</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.GetPostSteps.i_perform_get_operation_for(java.lang.String)">
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.that_the_user_should_navigate_in_pega_login_page()">
+                <span>Given that the user should navigate in PEGA Login Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_verify_the_login_page_elements_is_visible()">
+                <span>And user verify the Login Page Elements is Visible</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_login_using_invalid_credentials_with_username_and_password(java.lang.String,java.lang.String)">
+                <span>When user login using invalid credentials with username "invalidUser" and password "InvalidPassword"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_should_not_proceed_to_dashboard_page()">
+                <span>Then user should not proceed to Dashboard Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_login_using_valid_credentials(io.cucumber.datatable.DataTable)">
+                <span>When user login using valid credentials</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td><td>titlePage</td></tr><tr><td>author@vrbank</td><td>pega123!</td><td>Pega Dev Studio</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_should_proceed_to_dashboard_page()">
+                <span>Then user should proceed to Dashboard Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Login to PEGA Site using User</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.that_the_user_should_navigate_in_pega_login_page()">
+                <span>Given that the user should navigate in PEGA Login Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_verify_the_login_page_elements_is_visible()">
+                <span>And user verify the Login Page Elements is Visible</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_login_using_invalid_credentials_with_username_and_password(java.lang.String,java.lang.String)">
+                <span>When user login using invalid credentials with username "invalidUser" and password "InvalidPassword"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_should_not_proceed_to_dashboard_page()">
+                <span>Then user should not proceed to Dashboard Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_login_using_valid_credentials_with_username_and_password(java.lang.String,java.lang.String)">
+                <span>When user login using valid credentials with username "user@vrbank" and password "pega123!"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginPageSteps.user_should_proceed_to_dashboard_page()">
+                <span>Then user should proceed to Dashboard Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="39"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify DELETE operations using REST-assured</p>
+            <p class="text-sm">
+              <span>3:21:24 PM</span> / <span>00:00:04:018</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify DELETE operations using REST-assured</h5>
+<span class='badge badge-success'>04.01.2022 3:21:24 PM</span>
+<span class='badge badge-danger'>04.01.2022 3:21:28 PM</span>
+<span class='badge badge-default'>00:00:04:018</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>Validate and Verify DELETE for userCredentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.DeleteSteps.i_perform_operation_for(java.lang.String)">
+                <span>Given I perform DELETE operation for "/userCredentials"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.DeleteSteps.user_perform_a_post_operation_with_body_for_delete_operation(io.cucumber.datatable.DataTable)">
+                <span>When user perform a post operation with body for delete operation</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td><td>titlePage</td></tr><tr><td>usertoDelete</td><td>passtoDelete</td><td>Cosmos Application</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.DeleteSteps.i_will_see_the_created_data_with_username(java.lang.String)">
+                <span>And I will see the created data with username "usertoDelete"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.DeleteSteps.i_will_delete_the_posted_data_in_user_credentials(java.lang.String)">
+                <span>Then I will delete the posted data for "/userCredentials/{id}/"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.DeleteSteps.verify_that_the_created_data_is_no_longer_available()">
+                <span>And Verify that the created data is no longer available</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="51"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify GET operations using REST-assured</p>
+            <p class="text-sm">
+              <span>3:21:28 PM</span> / <span>00:00:06:504</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify GET operations using REST-assured</h5>
+<span class='badge badge-success'>04.01.2022 3:21:28 PM</span>
+<span class='badge badge-danger'>04.01.2022 3:21:34 PM</span>
+<span class='badge badge-default'>00:00:06:504</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Verify one author of the post</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_operation_for(java.lang.String)">
+                <span>Given I perform GET operation for "/posts"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_get_for_the_post_number(java.lang.String)">
+                <span>When I perform GET for the post number "2"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_should_see_the_author_name_as(java.lang.String)">
+                <span>Then I should see the author name as "api"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>Verify one existing user credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_operation_for(java.lang.String)">
+                <span>Given I perform GET operation for "/usercredentials"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_get_for_the_id_number(java.lang.Integer)">
+                <span>When I perform GET for the id number 2</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_should_see_the_username_is_and_password_is(java.lang.String,java.lang.String)">
+                <span>Then I should see the username is "manager@vrbank" and password is "pega123!"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="70"><span class="badge log pass-bg mr-2">Pass</span>Verify one existing comments</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_operation_for(java.lang.String)">
                 <span>Given I perform GET operation for "/comments"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.GetPostSteps.i_perform_get_using_parameter_id_number(java.lang.Integer)">
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_perform_get_using_parameter_id_number(java.lang.Integer)">
                 <span>When I perform GET using parameter id number 3</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.GetPostSteps.i_should_see_the_comment_body_is(java.lang.String)">
+              <div class="step pass-bg" title="stepdefinitions.api.GetSteps.i_should_see_the_comment_body_is(java.lang.String)">
                 <span>Then I should see the comment body is "this is comment for 3"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="79"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify different POST operations using REST-assured</p>
+            <p class="text-sm">
+              <span>3:21:34 PM</span> / <span>00:00:04:674</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify different POST operations using REST-assured</h5>
+<span class='badge badge-success'>04.01.2022 3:21:34 PM</span>
+<span class='badge badge-danger'>04.01.2022 3:21:39 PM</span>
+<span class='badge badge-default'>00:00:04:674</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=79</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="80"><span class="badge log pass-bg mr-2">Pass</span>Validate and Verify PATCH for comments</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.PatchSteps.i_perform_operation_for(java.lang.String)">
+                <span>Given I perform PATCH operation for "/comments"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.PatchSteps.user_perform_a_patch_operation_with_body(io.cucumber.datatable.DataTable)">
+                <span>When user perform a PATCH operation with body</span>
+      <div><table class='markup-table table '><tr><td>id</td><td>body</td><td>postId</td></tr><tr><td>3</td><td>this is updated value</td><td>3</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.PatchSteps.i_will_see_the_created_patch_data_with_body(java.lang.String)">
+                <span>Then I will see the created patch data with body "this is updated value"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>Validate and Verif POST for comments</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.api.PostSteps.i_perform_operation_for(java.lang.String)">
+                <span>Given I perform POST operation for "/userCredentials"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.PostSteps.user_perform_a_post_operation_with_body_for(java.lang.String,io.cucumber.datatable.DataTable)">
+                <span>When user perform a post operation with body for "UserCredentials"</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td><td>titlePage</td></tr><tr><td>notValid</td><td>invalidpass</td><td>Cosmos Application</td></tr><tr><td>invalidUser3</td><td>invalidpass3</td><td>Cosmos Application</td></tr><tr><td>invalidUser2</td><td>invalidpass2</td><td>Cosmos Application</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.api.PostSteps.i_will_see_the_created_post_data_with_username(java.lang.String)">
+                <span>Then I will see the created post data with username "invalidUser2"</span>
       <div>
       </div>
               </div>
@@ -341,21 +790,147 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">10</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>10</span>
 </span>
 <p class="name">@All</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">10 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@All</h4>
+<span status="pass" class='badge log pass-bg'>10 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:19:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Login fail possible combinations</a>
+<div class="">
+<span class="badge badge-default">Test Invalid User Credentials Feature.Login fail possible combinations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:19:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Login fail possible combinations</a>
+<div class="">
+<span class="badge badge-default">Test Invalid User Credentials Feature.Login fail possible combinations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:20:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='15'>Login to PEGA Site using Author, Manager and User</a>
+<div class="">
+<span class="badge badge-default">Validate And Verify Login Page to PEGA Site.Login to PEGA Site using Author, Manager and User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:20:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='27'>Login to PEGA Site using User</a>
+<div class="">
+<span class="badge badge-default">Validate And Verify Login Page to PEGA Site.Login to PEGA Site using User</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Validate and Verify DELETE for userCredentials</a>
+<div class="">
+<span class="badge badge-default">Verify DELETE operations using REST-assured.Validate and Verify DELETE for userCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='52'>Verify one author of the post</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one author of the post</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='61'>Verify one existing user credentials</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing user credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='70'>Verify one existing comments</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing comments</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='80'>Validate and Verify PATCH for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verify PATCH for comments</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='89'>Validate and Verif POST for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verif POST for comments</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -369,11 +944,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:14:51 PM</td>
+<td>15:20:54 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify one existing comments</a>
+<a href="#" class="linked" test-id='14' id='27'>Login to PEGA Site using User</a>
 <div class="">
-<span class="badge badge-default">Verify different GET operations using REST-assured.Verify one existing comments</span>
+<span class="badge badge-default">Validate And Verify Login Page to PEGA Site.Login to PEGA Site using User</span>
 </div>
 </td>
 </tr>
@@ -386,13 +961,49 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@Performance</p>
+<p class="name">@PatchTesting</p>
 <p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@PatchTesting</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='80'>Validate and Verify PATCH for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verify PATCH for comments</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+</span>
+<p class="name">@Performance</p>
+<p class="duration text-sm">6 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@Performance</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -405,11 +1016,163 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:14:51 PM</td>
+<td>15:21:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify one existing comments</a>
+<a href="#" class="linked" test-id='39' id='40'>Validate and Verify DELETE for userCredentials</a>
 <div class="">
-<span class="badge badge-default">Verify different GET operations using REST-assured.Verify one existing comments</span>
+<span class="badge badge-default">Verify DELETE operations using REST-assured.Validate and Verify DELETE for userCredentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='52'>Verify one author of the post</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one author of the post</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='61'>Verify one existing user credentials</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing user credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='70'>Verify one existing comments</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing comments</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='80'>Validate and Verify PATCH for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verify PATCH for comments</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='89'>Validate and Verif POST for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verif POST for comments</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@GETTesting</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@GETTesting</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='52'>Verify one author of the post</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one author of the post</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='61'>Verify one existing user credentials</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing user credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:32 PM</td>
+<td>
+<a href="#" class="linked" test-id='51' id='70'>Verify one existing comments</a>
+<div class="">
+<span class="badge badge-default">Verify GET operations using REST-assured.Verify one existing comments</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@testInvalid</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@testInvalid</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:19:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Login fail possible combinations</a>
+<div class="">
+<span class="badge badge-default">Test Invalid User Credentials Feature.Login fail possible combinations</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:19:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Login fail possible combinations</a>
+<div class="">
+<span class="badge badge-default">Test Invalid User Credentials Feature.Login fail possible combinations</span>
 </div>
 </td>
 </tr>
@@ -422,12 +1185,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@testing3</p>
+<p class="name">@Smoke</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@testing3</h4>
+<h4>@Smoke</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -441,11 +1204,119 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:14:51 PM</td>
+<td>15:20:22 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify one existing comments</a>
+<a href="#" class="linked" test-id='14' id='15'>Login to PEGA Site using Author, Manager and User</a>
 <div class="">
-<span class="badge badge-default">Verify different GET operations using REST-assured.Verify one existing comments</span>
+<span class="badge badge-default">Validate And Verify Login Page to PEGA Site.Login to PEGA Site using Author, Manager and User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@DeleteTesting</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@DeleteTesting</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Validate and Verify DELETE for userCredentials</a>
+<div class="">
+<span class="badge badge-default">Verify DELETE operations using REST-assured.Validate and Verify DELETE for userCredentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Test1</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Test1</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:20:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='15'>Login to PEGA Site using Author, Manager and User</a>
+<div class="">
+<span class="badge badge-default">Validate And Verify Login Page to PEGA Site.Login to PEGA Site using Author, Manager and User</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@POSTTesting</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@POSTTesting</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:21:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='79' id='89'>Validate and Verif POST for comments</a>
+<div class="">
+<span class="badge badge-default">Verify different POST operations using REST-assured.Validate and Verif POST for comments</span>
 </div>
 </td>
 </tr>

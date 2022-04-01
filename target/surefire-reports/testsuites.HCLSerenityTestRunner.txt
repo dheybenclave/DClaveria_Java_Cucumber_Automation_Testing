@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: testsuites.HCLSerenityTestRunner
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 124.788 s - in testsuites.HCLSerenityTestRunner
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 121.965 s - in testsuites.HCLSerenityTestRunner

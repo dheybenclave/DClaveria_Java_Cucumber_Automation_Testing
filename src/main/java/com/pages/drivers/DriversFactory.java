@@ -9,14 +9,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+import static com.utils.BaseClass.*;
 public class DriversFactory {
 
-	public static Logger logger = LoggerFactory.getLogger(DriversFactory.class);
 
 	public WebDriver driver;
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();

@@ -1,12 +1,16 @@
 package com.utils;
 
-import org.apache.commons.lang3.RandomStringUtils;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.api.RestAssuredDELETE;
 import com.api.RestAssuredExtension;
+import com.api.RestAssuredGET;
+import com.api.RestAssuredPATCH;
+import com.api.RestAssuredPOST;
 import com.pages.drivers.DriversFactory;
 
 import junit.framework.Assert;
@@ -17,9 +21,16 @@ public class BaseClass {
 	public WebDriver driver;
 	public WebDriverWait wait;
 	public Object pages;
-	public static RestAssuredExtension restAssuredExtension;
+
+	
 	public static Logger logger = Logger.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
 	public static ConstantsURL url;
+
+	public static RestAssuredExtension restAssured;
+	public static RestAssuredGET restAssuredGET ;
+	public static RestAssuredPOST restAssuredPOST;
+	public static RestAssuredDELETE restAssuredDELETE;
+	public static RestAssuredPATCH restAssuredPATCH;
 	
 	
 	public BaseClass(WebDriver driver) {
@@ -48,9 +59,6 @@ public class BaseClass {
 		}
 	}
 
-	public String randomString(int count) {
-		String retRandName = RandomStringUtils.randomAlphabetic(count);
-		return retRandName;
-	}
+	
 
 }

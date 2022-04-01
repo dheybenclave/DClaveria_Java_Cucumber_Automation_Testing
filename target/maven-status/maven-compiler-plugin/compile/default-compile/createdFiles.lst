@@ -6,4 +6,5 @@ com\utils\ExcelReader.class
 com\pages\drivers\DriversFactory.class
 com\utils\ConstantsURL.class
 com\utils\Utils.class
+com\api\RestAssuredExtension.class
 com\utils\BaseClass.class

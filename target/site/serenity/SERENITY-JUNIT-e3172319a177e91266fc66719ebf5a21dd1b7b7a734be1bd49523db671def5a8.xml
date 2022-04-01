@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Test Invalid User Credentials Feature" skipped="0" tests="1" time="37.12" timestamp="2022-03-29 08:36:33"><testcase name="Login fail possible combinations"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Test Invalid User Credentials Feature" skipped="0" tests="1" time="37.0" timestamp="2022-03-30 09:07:07"><testcase name="Login fail possible combinations"/></testsuite>

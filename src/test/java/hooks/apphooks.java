@@ -2,13 +2,18 @@ package hooks;
 
 import java.util.Properties;
 
-import static com.utils.BaseClass.restAssuredExtension;
+import static com.utils.BaseClass.*;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.api.RestAssuredDELETE;
 import com.api.RestAssuredExtension;
+import com.api.RestAssuredGET;
+import com.api.RestAssuredPATCH;
+import com.api.RestAssuredPOST;
 import com.pages.drivers.DriversFactory;
 import com.utils.*;
 import io.cucumber.java.*;
@@ -43,8 +48,11 @@ public class apphooks {
 
 	@Before(order = 2)
 	public void setUpRESTAPI() {
-		restAssuredExtension = new RestAssuredExtension();
-
+		restAssured = new RestAssuredExtension();
+		restAssuredGET = new RestAssuredGET();
+		restAssuredPOST = new RestAssuredPOST();
+		restAssuredDELETE = new RestAssuredDELETE();
+		restAssuredPATCH = new RestAssuredPATCH();
 	}
 
 	@After(order = 0) // first call if @After

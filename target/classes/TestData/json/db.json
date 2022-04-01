@@ -1,56 +1,71 @@
 {
-	"posts": [
-		{
-			"id": 1,
-			"title": "json-server",
-			"author": "typicode"
-		},
-		{
-			"id": 2,
-			"title": "rest-assured",
-			"author": "api"
-		},
-		{
-			"id": 3,
-			"title": "cucumber",
-			"author": "bdd"
-		}
-	],
-	"comments": [
-		{
-			"id": 1,
-			"body": "some comment",
-			"postId": 1
-		},
-		{
-			"id": 2,
-			"body": "this is comment for 2",
-			"postId": 2
-		},
-		{
-			"id": 3,
-			"body": "this is comment for 3",
-			"postId": 3
-		}
-	],
-	"userCredentials": [
-		{
-			"id": "1",
-			"username": "author@vrbank",
-			"password": "pega123!"
-		},
-		{
-			"id": "2",
-			"username": "manager@vrbank",
-			"password": "pega123!"
-		},
-		{
-			"id": "3",
-			"username": "user@vrbank",
-			"password": "pega123!"
-		}
-	],
-	"profile": {
-		"name": "typicode"
-	}
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "rest-assured",
+      "author": "api"
+    },
+    {
+      "id": 3,
+      "title": "cucumber",
+      "author": "bdd"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "this is comment for 2",
+      "postId": 2
+    },
+    {
+      "id": 3,
+      "body": "this is updated valuennFPQ",
+      "postId": "3"
+    }
+  ],
+  "userCredentials": [
+    {
+      "id": 1,
+      "username": "author@vrbank",
+      "password": "pega123!"
+    },
+    {
+      "id": 2,
+      "username": "manager@vrbank",
+      "password": "pega123!"
+    },
+    {
+      "id": 3,
+      "username": "user@vrbank",
+      "password": "pega123!"
+    },
+    {
+      "id": 4,
+      "username": "notValid",
+      "password": "invalidpass"
+    },
+    {
+      "id": 5,
+      "username": "invalidUser3",
+      "password": "invalidpass3"
+    },
+    {
+      "id": 6,
+      "username": "invalidUser2",
+      "password": "invalidpass2"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
